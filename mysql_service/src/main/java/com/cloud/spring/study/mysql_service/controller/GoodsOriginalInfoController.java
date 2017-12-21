@@ -1,22 +1,18 @@
 package com.cloud.spring.study.mysql_service.controller;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-
 import com.cloud.spring.study.mysql_service.core.MapperServiceImpl;
 import com.cloud.spring.study.mysql_service.entity.GoodsOriginalInfo;
 import com.cloud.spring.study.mysql_service.entity.GoodsOriginalInfoExample;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -34,7 +30,7 @@ public class GoodsOriginalInfoController {
        // return goodsOriginalInfoService.searchAndInsert(param);
     	logger.info("定时任务开始采集数据"+new Date().toLocaleString());
        GoodsOriginalInfoExample example = new GoodsOriginalInfoExample();
-       long a =  mapperService.getGoodsOriginalInfoMapper().countByExample(example);
+       List <GoodsOriginalInfo> goodsOriginalInfos = mapperService.getGoodsOriginalInfoMapper().selectByExample(example);
        //        logger.info(((List)(searchAndInsertBy_adzone_id.get("insert"))).size()+"");
 //        logger.info(((List)(searchAndInsertBy_adzone_id.get("update"))).size()+"");
         logger.info("定时任务采集数据结束"+new Date().toLocaleString());

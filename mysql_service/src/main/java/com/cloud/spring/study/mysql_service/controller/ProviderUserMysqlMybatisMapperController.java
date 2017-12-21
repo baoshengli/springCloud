@@ -24,12 +24,14 @@ public class ProviderUserMysqlMybatisMapperController {
 
     @GetMapping("/simple/{id}")
     public User findUserById(@PathVariable Long id) {
+
         return this.mapperService.getiUserMapper().findUserById(id);
     }
 
     @GetMapping("/simple/list")
     @ResponseBody
     public List<User> findUserList() {
+        System.out.println("dsfsd");
         return this.mapperService.getiUserMapper().findAllUsers();
     }
 

@@ -49,6 +49,11 @@
 	</profiles>
 	<dependencies>
 		<dependency>
+			<groupId>com.tao</groupId>
+			<artifactId>api</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>

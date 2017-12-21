@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/mybatis_mapper/mybatis_mapper.iml" filepath="$PROJECT_DIR$/mybatis_mapper/mybatis_mapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/mysql_service/mysql_service.iml" filepath="$PROJECT_DIR$/mysql_service/mysql_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis_service/redis_service.iml" filepath="$PROJECT_DIR$/redis_service/redis_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sync.iml" filepath="$PROJECT_DIR$/sync.iml" />
     </modules>
   </component>
 </project>
